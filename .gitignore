@@ -1,0 +1,16 @@
+# Visual Studio 忽略规则
+.vs/
+out/
+bin/
+obj/
+*.user
+*.suo
+*.pdb
+*.ipch
+*.aps
+*.opensdf
+*.sdf
+x64/
+x86/
+Debug/
+Release/
