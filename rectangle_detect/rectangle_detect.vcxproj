@@ -124,9 +124,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="new_detect.cpp" />
     <ClCompile Include="src\demo.cpp" />
-    <ClCompile Include="src\ImageProcessor.cpp" />
+    <ClCompile Include="src\new_Canny.cpp" />
+    <ClCompile Include="new_detect.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\ImageProcessor.h" />

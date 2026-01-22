@@ -127,7 +127,7 @@ public:
 int main() {
     // 1. 读取图像
     // 请替换为你的图片路径
-    std::string image_path = "./data/38.png";
+    std::string image_path = "./data/40.png";
     Mat src = imread(image_path, IMREAD_GRAYSCALE);
     if (src.empty()) {
         cerr << "Error: Could not load image." << endl;
@@ -183,7 +183,10 @@ int main() {
     // 绘制拟合的椭圆
     ellipse(result, fitBox, Scalar(0, 0, 255), 1);
     // 绘制圆心
-    circle(result, fitBox.center, 1, Scalar(0, 255, 0), -1);
+    int cx = cvRound(fitBox.center.x);
+    int cy = cvRound(fitBox.center.y);
+    result.at<cv::Vec3b>(cy, cx) = cv::Vec3b(0, 0, 255);
+
 
     // 输出高精度圆心
     cout << "-----------------------------------" << endl;
